@@ -15,7 +15,7 @@ import 'rxjs/Rx';
 
 export class PostsService {
 
-    private apiUrl = `${environment.apiUrl}/posts`;
+    private apiUrl = `${environment.apiUrl}/routes/posts`;
     private handleError: HandleError;
 
     httpOptions = {

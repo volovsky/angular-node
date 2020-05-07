@@ -4,9 +4,7 @@ import { PostsService } from '../services/posts.service';
 @Component({
     selector: 'app-posts',
     templateUrl: './posts.component.html',
-    styleUrls: ['./posts.component.less'],
-    // Register the Post service by add it to the providers
-    providers: [PostsService]
+    styleUrls: ['./posts.component.less']
 })
 export class PostsComponent implements OnInit {
 

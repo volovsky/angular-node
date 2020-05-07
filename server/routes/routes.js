@@ -6,10 +6,14 @@ const axios = require('axios');
 
 const postsAPI = 'https://jsonplaceholder.typicode.com';
 
-//GET POST
 router.get('/', (req, res, next)=> {
+    res.send('IT WORKS');
+});
+
+//GET POST
+router.get('/posts', (req, res, next)=> {
     //res.send('POST WORKS');
-    axios.get('https://jsonplaceholder.typicode.com/posts').then((response)=>{
+    axios.get(`${postsAPI}/posts`).then((response)=>{
       console.log("There are posts");
       //res.send(response.data);
       res.status(200).json(response.data);

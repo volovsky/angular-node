@@ -5,8 +5,7 @@ const path = require('path');
 //const app = express();
 
 // Getting our POSTS routes
-const posts = require('./server/routes/posts');
-const todos = require('./server/routes/todos');
+const routes = require('./server/routes/routes');
 
 const hostname = 'localhost';
 const port = process.env.PORT || 3000;
@@ -25,8 +24,7 @@ const server = express();
 // Use midlleware
 server.use(cors());
 server.use(express.static(path.join(__dirname, 'dist/angular-posts')));
-server.use('/posts', posts);
-server.use('/todos', todos);
+server.use('/routes', routes);
 
 // Catch all OTHER routes requests which are not defined above ('/posts') and return it to this index.html
 server.get('*', (req, res)=>{

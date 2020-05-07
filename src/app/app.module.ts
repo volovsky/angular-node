@@ -14,6 +14,8 @@ import { TodosComponent } from './todos/todos.component';
 
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
+import { PostsService } from './services/posts.service';
+
 
 @NgModule({
     declarations: [
@@ -30,7 +32,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     ],
     providers: [
       HttpErrorHandler,
-      MessagesService
+      MessagesService,
+      PostsService
     ],
     bootstrap: [AppComponent]
 })
